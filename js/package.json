@@ -1,0 +1,15 @@
+{
+  "name": "sonveer",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "jquery-1.11.0.min.js",
+  "dependencies": {
+    "jquery-circle-progress": "^1.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
