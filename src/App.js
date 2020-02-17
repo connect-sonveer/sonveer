@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -12,19 +13,30 @@ import Footer from "./components/Footer";
 class Application extends Component {
   
   render() {
-    return (
-      <React.Fragment>
-        <Header />
-        <Home />
-        <About />
-        <Skills />
-        <Experience />
-        <Portfolio />
-        <Education />
-        <Contact />
-        <Footer />
-      </React.Fragment>
-    );
+    if(window.location.pathname == "/"){
+      return (
+        <React.Fragment>
+          <Header />
+          <Home />
+          <About />
+          <Skills />
+          <Experience />
+          <Portfolio />
+          <Education />
+          <Contact />
+          <Footer />
+        </React.Fragment>
+      );
+    } else {
+      return(
+        <React.Fragment>
+          <Router>
+            <Route path="/blog" exact component={Skills} />
+          </Router>
+        </React.Fragment>
+      )
+    }
+    
   }
 }
 
