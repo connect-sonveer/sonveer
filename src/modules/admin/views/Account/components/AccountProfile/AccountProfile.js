@@ -13,6 +13,7 @@ import {
   Button,
   LinearProgress
 } from '@material-ui/core';
+import avatar from '../../../../../../assets/admin/images/avatars/avatar_11.png'
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -44,7 +45,7 @@ const AccountProfile = props => {
     city: 'Los Angeles',
     country: 'USA',
     timezone: 'GTM-7',
-    avatar: '/images/avatars/avatar_11.png'
+    avatar: avatar
   };
 
   return (

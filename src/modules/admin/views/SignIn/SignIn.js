@@ -12,8 +12,10 @@ import {
   Typography
 } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-
+import authImg from '../../../../assets/admin/images/auth.jpg';
 import { Facebook as FacebookIcon, Google as GoogleIcon } from '../../../../icons';
+import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login'
 
 const schema = {
   email: {
@@ -50,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage: 'url(/images/auth.jpg)',
+    backgroundImage: `url(${authImg})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'
@@ -136,6 +138,14 @@ const SignIn = props => {
     touched: {},
     errors: {}
   });
+
+  const responseFacebook = (response) => {
+    console.log(response);
+  }
+
+  const responseGoogle = (response) => {
+    console.log(response);
+  }
 
   useEffect(() => {
     const errors = validate(formState.values, schema);
@@ -250,25 +260,19 @@ const SignIn = props => {
                   spacing={2}
                 >
                   <Grid item>
-                    <Button
-                      color="primary"
-                      onClick={handleSignIn}
-                      size="large"
-                      variant="contained"
-                    >
-                      <FacebookIcon className={classes.socialIcon} />
-                      Login with Facebook
-                    </Button>
+                  <FacebookLogin
+                    appId="2512827725657344" //APP ID NOT CREATED YET
+                    fields="name,email,picture"
+                    callback={responseFacebook}
+                  />
                   </Grid>
                   <Grid item>
-                    <Button
-                      onClick={handleSignIn}
-                      size="large"
-                      variant="contained"
-                    >
-                      <GoogleIcon className={classes.socialIcon} />
-                      Login with Google
-                    </Button>
+                  <GoogleLogin
+                    clientId="484709949465-18apaor89k65jfc15fcch7t3fd0qn58s.apps.googleusercontent.com" //CLIENTID NOT CREATED YET
+                    buttonText="LOGIN WITH GOOGLE"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                  />
                   </Grid>
                 </Grid>
                 <Typography
@@ -325,7 +329,7 @@ const SignIn = props => {
                   Don't have an account?{' '}
                   <Link
                     component={RouterLink}
-                    to="/sign-up"
+                    to="/admin/sign-up"
                     variant="h6"
                   >
                     Sign up

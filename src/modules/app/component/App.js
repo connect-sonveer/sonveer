@@ -3,6 +3,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { createBrowserHistory } from 'history';
 import { ThemeProvider } from '@material-ui/styles';
 import { Chart } from 'react-chartjs-2';
+import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
 import { chartjs } from '../../../helpers';
 import theme from '../../admin/theme';
 import validate from 'validate.js';

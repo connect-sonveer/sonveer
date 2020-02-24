@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { AppBar, Toolbar } from '@material-ui/core';
+import logo from '../../../../../../assets/admin/images/logos/logo--white.svg'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -27,7 +28,7 @@ const Topbar = props => {
         <RouterLink to="/">
           <img
             alt="Logo"
-            src="/images/logos/logo--white.svg"
+            src={logo}
           />
         </RouterLink>
       </Toolbar>

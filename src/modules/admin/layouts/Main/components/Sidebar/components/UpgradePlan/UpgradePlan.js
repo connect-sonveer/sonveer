@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Typography, Button, colors } from '@material-ui/core';
+import undraw_resume_folder from '../../../../../../../../assets/admin/images/undraw_resume_folder_2_arse.svg'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,7 +41,7 @@ const UpgradePlan = props => {
       <div className={classes.media}>
         <img
           alt="Upgrade to PRO"
-          src="/images/undraw_resume_folder_2_arse.svg"
+          src={undraw_resume_folder}
         />
       </div>
       <div className={classes.content}>

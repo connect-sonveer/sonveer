@@ -14,6 +14,7 @@ import {
   Typography
 } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import authImg from '../../../../assets/admin/images/auth.jpg'
 
 const schema = {
   firstName: {
@@ -66,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage: 'url(/images/auth.jpg)',
+    backgroundImage: `url(${authImg})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'
@@ -363,7 +364,7 @@ const SignUp = props => {
                   Have an account?{' '}
                   <Link
                     component={RouterLink}
-                    to="/sign-in"
+                    to="/admin/sign-in"
                     variant="h6"
                   >
                     Sign in
