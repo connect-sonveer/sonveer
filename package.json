@@ -1,6 +1,6 @@
 {
   "name": "sonveer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.3",
@@ -10,6 +10,7 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "clsx": "^1.1.0",
+    "concurrently": "^5.1.0",
     "d3-ease": "^1.0.6",
     "history": "^4.10.1",
     "jquery": "^3.4.1",
@@ -36,7 +37,11 @@
     "validate.js": "^0.13.1"
   },
   "scripts": {
-    "start": "HTTPS=true react-scripts start",
+    "server": "cd API && nodemon server.js",
+    "client": "PORT=4000 HTTPS=true react-scripts start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "npm run dev",
+    "start2": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

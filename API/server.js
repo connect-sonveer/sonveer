@@ -30,11 +30,13 @@ mongoose.connection.on('error', err => {
 
 //----------------add the routes----------------//
 
-const contactRouter = require('./routes/contacts');
-const categoryRouter = require('./routes/categories');
+const contactRouter = require('./routes/portfolio/contacts');
+const categoryRouter = require('./routes/blog/categories');
+const userRouter = require('./routes/admin/users');
 
 app.use('/contacts', contactRouter);
 app.use('/categories', categoryRouter);
+app.use('/users', userRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
