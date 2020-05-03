@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sonveer/static/css/main.1527a83f.chunk.css",
-    "main.js": "/sonveer/static/js/main.fe0fcd7b.chunk.js",
-    "main.js.map": "/sonveer/static/js/main.fe0fcd7b.chunk.js.map",
+    "main.js": "/sonveer/static/js/main.0c70792b.chunk.js",
+    "main.js.map": "/sonveer/static/js/main.0c70792b.chunk.js.map",
     "runtime~main.js": "/sonveer/static/js/runtime~main.1a4f15de.js",
     "runtime~main.js.map": "/sonveer/static/js/runtime~main.1a4f15de.js.map",
     "static/css/2.97b0828e.chunk.css": "/sonveer/static/css/2.97b0828e.chunk.css",
     "static/js/2.4cec5ad5.chunk.js": "/sonveer/static/js/2.4cec5ad5.chunk.js",
     "static/js/2.4cec5ad5.chunk.js.map": "/sonveer/static/js/2.4cec5ad5.chunk.js.map",
     "index.html": "/sonveer/index.html",
-    "precache-manifest.e5288f35e450c9ebd8cc12f3ce90897e.js": "/sonveer/precache-manifest.e5288f35e450c9ebd8cc12f3ce90897e.js",
+    "precache-manifest.ee68952c534bd1ad10fc38b9e8ca4f98.js": "/sonveer/precache-manifest.ee68952c534bd1ad10fc38b9e8ca4f98.js",
     "service-worker.js": "/sonveer/service-worker.js",
     "static/css/2.97b0828e.chunk.css.map": "/sonveer/static/css/2.97b0828e.chunk.css.map",
     "static/css/main.1527a83f.chunk.css.map": "/sonveer/static/css/main.1527a83f.chunk.css.map",

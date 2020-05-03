@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3a6085b89c154d9b8ff76a5e410459ed",
+    "revision": "b2437f75b964f261bf25e63b68b7f52a",
     "url": "/sonveer/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sonveer/static/css/2.97b0828e.chunk.css"
   },
   {
-    "revision": "f95499f70059d76f4b38",
+    "revision": "3b1c40d20338dcce3c53",
     "url": "/sonveer/static/css/main.1527a83f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sonveer/static/js/2.4cec5ad5.chunk.js"
   },
   {
-    "revision": "f95499f70059d76f4b38",
-    "url": "/sonveer/static/js/main.fe0fcd7b.chunk.js"
+    "revision": "3b1c40d20338dcce3c53",
+    "url": "/sonveer/static/js/main.0c70792b.chunk.js"
   },
   {
     "revision": "a6370e2c43db26ad08c2",
