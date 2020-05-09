@@ -1,30 +1,30 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from 'react';
+import axios from 'axios';
 // import 'react-notifications/lib/notifications.css';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 class Contact extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      name: "",
-      email: "",
-      mobile: "",
-      subject: "",
-      message: ""
+      name: '',
+      email: '',
+      mobile: '',
+      subject: '',
+      message: '',
     };
   }
 
   emptyContactForm = () => {
     this.setState({
-      name: "",
-      email: "",
-      mobile: "",
-      subject: "",
-      message: ""
-    })
-  }
+      name: '',
+      email: '',
+      mobile: '',
+      subject: '',
+      message: '',
+    });
+  };
 
   createNotification = (type) => {
     return () => {
@@ -45,50 +45,43 @@ class Contact extends Component {
           break;
       }
     };
-  }
+  };
 
-  changeHandler = e => {
+  changeHandler = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  submitHandler = e => {
+  submitHandler = (e) => {
     e.preventDefault();
     const contact = {
-        name: this.state.name,
-        email: this.state.email,
-        mobile: this.state.mobile,
-        subject: this.state.subject,
-        message: this.state.message
+      name: this.state.name,
+      email: this.state.email,
+      mobile: this.state.mobile,
+      subject: this.state.subject,
+      message: this.state.message,
     };
 
-    axios.post('http://localhost:5001/contacts/add', contact)
-        .then((res) => {
-          console.log(res.data);
-          this.emptyContactForm();
-          document.getElementById('move-top').click();
-        });
-
-    
+    axios.post('http://localhost:5001/contacts/add', contact).then((res) => {
+      console.log(res.data);
+      this.emptyContactForm();
+      document.getElementById('move-top').click();
+    });
   };
 
   render() {
     const { name, email, mobile, subject, message } = this.state;
     return (
       <section className="contact py-5" id="contact">
-        <NotificationContainer/>
+        <NotificationContainer />
         <div className="container py-lg-5">
           <p className="paragraph">Get in touch with me</p>
           <h3 className="heading mb-sm-5 mb-4">Contact</h3>
           <div className="contact-form">
             <div className="row">
               <div className="col-lg-8">
-                <form
-                  name="contactform"
-                  id="contactform"
-                  onSubmit={this.submitHandler}
-                >
+                <form name="contactform" id="contactform" onSubmit={this.submitHandler}>
                   <div className="row">
                     <div className="form-group col-md-6 ">
                       <label>Name</label>
